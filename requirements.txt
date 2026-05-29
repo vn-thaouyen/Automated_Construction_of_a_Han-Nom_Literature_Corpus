@@ -1,0 +1,9 @@
+numpy>=1.24,<3.0
+pandas>=2.0,<3.0
+opencv-python>=4.8
+Pillow>=10.0
+matplotlib>=3.8
+requests>=2.31
+openai>=1.30
+llama-parse>=0.5
+ipython>=8.0
