@@ -46,7 +46,7 @@ The system is designed flexibly with separate processing pipelines for each book
 ### 3. "Chi Nam Ngoc Am Giai Nghia" Book
 * **Input:** Image file in `.jpg` format and coordinate file in `.json` format (from LabelMe).
 * **Operating method:**
-  * This is a book with a complex layout. The pipeline will read the coordinates of the large character columns ("đại tự") from the JSON file, then automatically interpolate/calculate the coordinates of the small character columns ("tiểu tự") located above or below based on the `small_char_dim` parameter.
+  * This is a book with a complex layout. The pipeline will read the coordinates of the large character columns ("Bản tựa Hán") from the JSON file, then automatically interpolate/calculate the coordinates of the small character columns ("Bản tựa Nôm") located above or below based on the `small_char_dim` parameter.
   * Crops the image according to each coordinate block (`warp_perspective_crop`).
   * Sends each cropped image block to the CLC Sino-Nom API for OCR.
   * **Fallback Mechanism (Backup):** If the main API returns empty results or the block ID is in the mandatory list, the system will automatically call the OpenRouter API (model `qwen/qwen3-vl-32b-instruct`) to translate the image.
